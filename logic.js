@@ -36,10 +36,13 @@
             
             function updateScore(result){
                 document.querySelector('.js-score')
-                .innerHTML = `Wins: ${score.Wins} | Loses ${score.Loses} | Draws: ${score.Draws}` 
+                .innerHTML = `Wins🏆: ${score.Wins} | Loses❌: ${score.Loses} | Draws🟰: ${score.Draws}` 
 
-                document.querySelector('.js-moves')
-                .innerHTML = `Your move: ${game.playerMove} - Computer's move: ${game.ComputerMove}`
+                document.querySelector('.js-user-moves')
+                .innerHTML = `Your move:<br> ${getImage(game.playerMove)} </br>`
+                
+                document.querySelector('.js-computer-moves').innerHTML = 
+                ` Computer's move: <br>${getImage(game.ComputerMove)}</br>`
 
                 if(!result){
                     result = "You haven't played a game yet!"
@@ -146,4 +149,23 @@
                 game.playerMove = "None"
                 localStorage.setItem("score", JSON.stringify(score));
                 updateScore();
+            }
+
+            function getImage(result){
+                if(result === "Rock"){
+                    return `<img src = "images/rock.png" class = "move-emoji">`
+                }
+                   
+            
+                if(result === "Paper"){
+                    return `<img src="images/paper.png" class= "move-emoji">`
+                }
+
+                if(result === "Scissor"){
+                    return `<img src = "images/scissors.png" class = "move-emoji">`
+                }
+
+                if (result === "None"){
+                    return "None"
+                }
             }
