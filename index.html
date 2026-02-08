@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            Rock Paper Scissors
+        </title>
+        <link rel="stylesheet" href = "styles.css">
+
+    </head>
+
+    <body onload="updateScore()">
+
+        <h1>Welcome to the Rock, Paper, Scissors Game</h1>
+
+        <p class = "pick">Pick a choice from below</p>
+        <div class = "choices">
+        <button onclick="
+            getResult('Rock');"
+            class = "move-image"
+            ><img src = "images/rock.png" class = "move-emoji">
+        </button>
+
+        
+        <button onclick="
+            getResult('Paper');"
+            class = "move-image"
+            ><img src="images/paper.png" class= "move-emoji">
+        </button>
+
+        
+        <button onclick="
+            getResult('Scissor');"
+            class= "move-image"
+            > <img src = "images/scissors.png" class = "move-emoji">
+        </button>
+        </div>
+
+        <div class = "texts">
+            <p id = "js-result"></p>
+            <p class = "js-moves" ></p>
+            <p class = "js-score" ></p>
+        </div>
+            
+            <button class = "reset" onclick=" resetScore()">Reset</button>
+
+        <script src = "logic.js"></script>
+    </body>
+</html>
