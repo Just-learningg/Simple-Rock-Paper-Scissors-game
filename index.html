@@ -1,53 +1,42 @@
 <!DOCTYPE html>
 <html>
+
     <head>
-        <meta charset="UTF-8">
-        <title>
-            Rock Paper Scissors
-        </title>
-        <link rel="stylesheet" href = "styles.css">
+        <title>Welcoem to Rock Paper Scissors!</title> 
+        <link rel= "stylesheet" href = "styleForHome.css">
 
     </head>
 
-    <body onload="updateScore()">
+    <body>
 
-        <h1>Welcome to the Rock, Paper, Scissors Game</h1>
+       <h1> Welcome to the Rock Paper Scissor Game</h1> 
+       <p>Choose an Option from below!</p>
+       <div class = "options">
+            <button class="custom-btn btn-12" onclick="
+                forPlayerPage()
+                "><span>Genarate Link</span><span>Play with a Friend</span></button>
 
-        <p class = "pick">Pick a choice from below</p>
-        <div class = "choices">
-        <button onclick="
-            getResult('Rock');"
-            class = "move-image"
-            ><img src = "images/rock.png" class = "move-emoji">
-        </button>
-
-        
-        <button onclick="
-            getResult('Paper');"
-            class = "move-image"
-            ><img src="images/paper.png" class= "move-emoji">
-        </button>
-
-        
-        <button onclick="
-            getResult('Scissor');"
-            class= "move-image"
-            > <img src = "images/scissors.png" class = "move-emoji">
-        </button>
-        </div>
-
-        <div class = "texts">
-            <p id = "js-result"></p>
-            <div class = "moves">
-                <p class = "js-user-moves" ></p>
-                <p class = "js-computer-moves" ></p>
-            </div>
+            or
             
-            <p class = "js-score" ></p>
-        </div>
+            <button class="custom-btn btn-6" onclick="
             
-            <button class = "reset" onclick=" resetScore()">Reset</button>
+            goToPage()
+            "><span>Play with a Bot</span>
+          
+          
+       </div>
 
-        <script src = "logic.js"></script>
+    
+       <script>
+            function goToPage() {
+                window.location.href = "Ai.html";
+             }
+
+            function forPlayerPage(){
+                window.location.href = "player1.html";
+            }
+       </script>
+    
+
     </body>
 </html>
