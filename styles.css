@@ -3,18 +3,27 @@
                 background-color: black;
                 color: white;
                 font-family: Arial, Helvetica, sans-serif;
-
+                background: linear-gradient(-45deg, black, rgb(83, 70, 0));
+                background-size: 400% 400%;
+                animation: gradient 15s ease infinite;
+                height: 100vh;
             }
 
             .move-emoji{
                 height: 90px;
 
             }
+            
+            @keyframes handShake {
+            0%,100% { transform: rotate(10deg); }
+            50% { transform: rotate(-10deg); }
+            }
 
             
 
             h1 {
                 text-align: center;
+                font-size: 50px;
             }
 
             .move-image {
@@ -22,6 +31,7 @@
                 /*border: 1px solid white;*/
                 border: none;
                 cursor: pointer;
+                animation: handShake 2s infinite;
                 
             }
 
@@ -45,7 +55,7 @@
 
             .reset {
                 display: block;
-                margin: 0 auto;
+              
                 padding-top: 10px;
                 padding-bottom:10px;
                 padding-left: 20px;
@@ -55,12 +65,11 @@
                 font-size: 18px;
             }
 
-            .reset:active{
-                transform: scale(0.97);
-            }
+            
 
             .reset:hover{
                 background-color: bisque;
+                transform: scale(1.05);
             }
 
             .pick{
@@ -79,4 +88,72 @@
 
             .js-score{
                 font-size : 30px
+            }
+
+            #js-result{
+                font-size: 35px;
+            }
+
+
+            @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+             }
+
+             .link{
+                text-align: center;
+                font-size: 25px;
+             }
+
+             #linkBox{
+                font-size: 20px;
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 20px auto; 
+             }
+
+            .scores {
+                display: flex;
+                justify-content: center;   /* center as a group */
+                align-items: center;
+                gap: 300px;                 /* space between buttons */
+
+                margin-bottom: 50px;
+            }
+
+            .resetButtons {
+                display: flex;
+                justify-content: center;   /* center as a group */
+
+                               /* space between buttons */
+
+                margin-bottom: 50px;
+            }
+
+
+            .Player{
+                text-align: center;
+                font-size: 30px;
+            }
+
+            
+            .reset-ai {
+                display: block;
+                margin: 0 auto;
+                padding-top: 10px;
+                padding-bottom:10px;
+                padding-left: 20px;
+                padding-right: 20px;
+                border-radius: 50px;
+                cursor: pointer;
+                font-size: 18px;
             }
