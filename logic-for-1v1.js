@@ -230,7 +230,7 @@ function getImage(result) {
 function showLink() {
   const el = document.getElementById("linkBox");
   if (!el) return;
-  el.value = "http://127.0.0.1:5500/player2.html";
+  el.value = "https://just-learningg.github.io/Simple-Rock-Paper-Scissors-game/player2.html";
 }
 
 // ======================
@@ -241,3 +241,4 @@ window.addEventListener("load", () => {
   render();
   if (role === "p1") showLink();
 });
+
