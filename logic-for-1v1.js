@@ -241,4 +241,3 @@ window.addEventListener("load", () => {
   render();
   if (role === "p1") showLink();
 });
-
