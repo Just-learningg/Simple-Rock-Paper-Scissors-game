@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            Rock Paper Scissors
+        </title>
+        <link rel="stylesheet" href = "styles.css">
+<script
+  src="https://unpkg.com/@lottiefiles/dotlottie-wc@latest/dist/dotlottie-wc.js"
+  type="module">
+</script>
+
+
+    </head>
+
+    <body onload="updateScore()
+                showLink() ">
+
+        <h1>Welcome to the Rock, Paper, Scissors Game</h1>
+         <p class ="Player">You are Player 1</p>
+        <p class = "pick">Pick a choice from below</p>
+        <div class = "choices">
+            <button onclick="
+                makeMovep1('Rock')"
+                class = "move-image"
+                ><img src = "images/rock.png" class = "move-emoji">
+            </button>
+
+            
+            <button onclick="
+                makeMovep1('Paper')"
+                class = "move-image"
+                ><img src="images/paper.png" class= "move-emoji">
+            </button>
+
+            
+            <button onclick="
+                makeMovep1('Scissors')"
+                class= "move-image"
+                > <img src = "images/scissors.png" class = "move-emoji">
+            </button>
+        </div>
+
+        <div class = "texts">
+            <p id = "js-result"></p>
+            <div class = "moves">
+                <p class = "js-user-moves" ></p>
+                <p class = "js-computer-moves" ></p>
+            </div>
+            
+            <div class = "scores">
+                <p class = "js-score-player1" ></p>
+                <p class = "js-score-player2" ></p>
+            </div>
+        </div>
+        <div class = "resetButtons">
+            <button class = "reset" onclick=" reset()">Reset</button> 
+            <button class = "reset" onclick=" resetScore()">ResetScore</button>
+        </div>
+        
+            <p class = link>Share this link with Player 2:</p>
+            <input id="linkBox" type="text" style="width: 50%;" readonly>
+
+            
+        <script>
+            window.PLAYER_ROLE = "p1";
+        </script>
+
+        <script src = "logic-for-1v1.js"></script>
+    </body>
+</html>
